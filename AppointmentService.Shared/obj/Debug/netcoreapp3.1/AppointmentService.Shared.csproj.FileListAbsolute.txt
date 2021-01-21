@@ -1,0 +1,13 @@
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/bin/Debug/netcoreapp3.1/AppointmentService.Shared.deps.json
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/bin/Debug/netcoreapp3.1/AppointmentService.Shared.dll
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/bin/Debug/netcoreapp3.1/AppointmentService.Shared.pdb
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.AssemblyInfoInputs.cache
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.AssemblyInfo.cs
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.csproj.CoreCompileInputs.cache
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/staticwebassets/AppointmentService.Shared.StaticWebAssets.Manifest.cache
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/staticwebassets/AppointmentService.Shared.StaticWebAssets.xml
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/scopedcss/bundle/AppointmentService.Shared.styles.css
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.RazorTargetAssemblyInfo.cache
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.dll
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.pdb
+/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/Debug/netcoreapp3.1/AppointmentService.Shared.csprojAssemblyReference.cache

@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.DAL/AppointmentService.DAL.csproj": {}
+  },
+  "projects": {
+    "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.DAL/AppointmentService.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.DAL/AppointmentService.DAL.csproj",
+        "projectName": "AppointmentService.DAL",
+        "projectPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.DAL/AppointmentService.DAL.csproj",
+        "packagesPath": "/Users/maxim/.nuget/packages/",
+        "outputPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/maxim/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj": {
+                "projectPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj",
+        "projectName": "AppointmentService.Shared",
+        "projectPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj",
+        "packagesPath": "/Users/maxim/.nuget/packages/",
+        "outputPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/maxim/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

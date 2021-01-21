@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Accessors\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppointmentService.Shared\AppointmentService.Shared.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

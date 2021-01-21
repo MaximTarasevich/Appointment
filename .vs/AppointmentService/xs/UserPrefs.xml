@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{32DBB5AD-7588-47F4-A85C-C66A397B78A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.AppointmentService PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppointmentService" expanded="True">
+            <Node name="AppointmentService" expanded="True">
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AppointmentService.DAL PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
