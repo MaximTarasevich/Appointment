@@ -49,11 +49,9 @@ namespace AppointmentService
 
             services.AddTransient<DataManager>();
             #region DbAccessors
-            services.AddTransient<DoctorAccessor>();
-            services.AddTransient<HospitalAccessor>();
-            services.AddTransient<SpecializationAccessor>();
-            services.AddTransient<AddressAccessor>();
-            services.AddTransient<AppointmentAccessor>();
+            services.AddTransient<DataAccessor>();
+            services.AddTransient<UserAccessor>();
+
 
             #endregion
         }

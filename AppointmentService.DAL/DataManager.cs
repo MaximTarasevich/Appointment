@@ -5,22 +5,15 @@ namespace AppointmentService.DAL
 {
     public class DataManager : IDisposable
     {
-        public AddressAccessor AddressAccessor { get; set; }
+        public DataAccessor DataAccessor { get; set; }
 
-        public AppointmentAccessor AppointmentAccessor { get; set; }
+        public UserAccessor UserAccessor { get; set; }
 
-        public DoctorAccessor DoctorAccessor { get; set; }
-
-        public HospitalAccessor HospitalAccessor { get; set; }
-
-        public SpecializationAccessor SpecializationAccessor { get; set; }
-        public DataManager(AddressAccessor aotFA, AppointmentAccessor AA, DoctorAccessor CA, HospitalAccessor DSIA, SpecializationAccessor EA)
+        public DataManager(DataAccessor aotFA, UserAccessor AA)
         {
-            AddressAccessor = aotFA;
-            AppointmentAccessor = AA;
-            DoctorAccessor = CA;
-            HospitalAccessor = DSIA;
-            SpecializationAccessor = EA;
+            DataAccessor = aotFA;
+            UserAccessor = AA;
+
         }
 
         public DataManager(bool init)

@@ -25,11 +25,9 @@ namespace AppointmentService.DAL
 
             AppointmentService.DAL.RepositoryContext _context = new AppointmentService.DAL.RepositoryContext(bld.Options as Microsoft.EntityFrameworkCore.DbContextOptions<AppointmentService.DAL.RepositoryContext>);
 
-            _dm.AddressAccessor = new Accessors.AddressAccessor(_context);
-            _dm.AppointmentAccessor = new Accessors.AppointmentAccessor(_context);
-            _dm.HospitalAccessor = new Accessors.HospitalAccessor(_context);
-            _dm.DoctorAccessor = new Accessors.DoctorAccessor(_context);
-            _dm.SpecializationAccessor = new Accessors.SpecializationAccessor(_context);
+            _dm.DataAccessor = new Accessors.DataAccessor(_context);
+            _dm.UserAccessor = new Accessors.UserAccessor(_context);
+
 
             return _dm;
         }

@@ -12,11 +12,8 @@ namespace AppointmentService.DAL
 
         }
 
-        public DbSet<Address> AOTFilters { get; set; }
-        public DbSet<Appointment> Authors { get; set; }
-        public DbSet<Doctor> Cameras { get; set; }
-        public DbSet<Hospital> dSTORMInfos { get; set; }
-        public DbSet<Specialization> Experiments { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Data> Data { get; set; }
         public void Close()
         {
             try
