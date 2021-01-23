@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-// import Result from './result.js';
+import Result from './Result';
+import {formatInput} from '../utils/format-input';
+import DateTimePicker from 'react-datetime-picker';
+import { Input } from '@material-ui/core';
 
 const PhysicalActivityRatio = {
   MIN: 1.2,
@@ -25,36 +28,141 @@ const CaloriesMinMaxRatio = {
   MAX: 1.15
 };
 
+const getCorrectDateString = (date) => `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+
+const GenderType = {
+	male: 0,
+	female: 1
+};
+
+const PhysicalActivity = {
+	min: 0,
+	low: 1,
+	medium: 2,
+	high: 3,
+};
+
 export class Counter extends Component {
-    // this.root = element;
-    // this.form = this.root.querySelector(`.counter__form`);
-    // this.elements = this.form.elements;
-    // this.parameters = this.elements.parameters.elements;
-    // this.submit = this.elements.submit;
-    // this.reset = this.elements.reset;
-    // this.gender = this.elements.gender;
-    // this.age = this.elements.age;
-    // this.weight = this.elements.weight;
-    // this.height = this.elements.height;
-    // this.activity = this.elements.activity;
+	
+	state = {
+		selectedDate: new Date()
+	};
 
-    // this.result = new Result(this.root);
+  componentDidMount = () => {
+    this.root = this.articleCounterRef;
+    this.form = this.counterFormRef;
+    this.elements = this.form.elements;
+    this.parameters = this.elements.parameters.elements;
+    this.submit = this.elements.submit;
+    this.reset = this.elements.reset;
+    this.gender = this.elements.gender;
+    this.age = this.elements.age;
+    this.weight = this.elements.weight;
+    this.height = this.elements.height;
+    this.activity = this.elements.activity;
 
-    // this.parametersItems = Array.from(this.parameters);
+    this.result = new Result(this.root);
 
-    // this._onFormInput = this._onFormInput.bind(this);
-    // this._onFormReset = this._onFormReset.bind(this);
-    // this._onFormSubmit = this._onFormSubmit.bind(this);
+    this.parametersItems = Array.from(this.parameters);
     
+    this.form.addEventListener(`input`, this._onFormInput, true);
+    this.form.addEventListener(`reset`, this._onFormReset);
+    this.form.addEventListener(`submit`, this._onFormSubmit);
+
+
+  }
+
+  _onFormSubmit = (evt) => {
+    evt.preventDefault();
+
+	console.log(
+		GenderType[this.elements.gender.value],
+		this.elements.age.value,
+		this.elements.weight.value,
+		this.elements.height.value,
+		PhysicalActivity[this.elements.activity.value],
+		this.elements.firstname.value,
+		this.elements.surname.value,
+		getCorrectDateString(new Date(this.state.selectedDate))
+	)
+
+	fetch('data/Save', {
+        method: 'POST',
+        body: JSON.stringify({
+			Gender: GenderType[this.elements.gender.value],
+			Age: this.elements.age.value,
+			Weight: this.elements.weight.value,
+			Height: this.elements.height.value,
+			Activity: PhysicalActivity[this.elements.activity.value],
+			UserName: this.elements.firstname.value,
+			UserSurname: this.elements.surname.value,
+			BithdayDate: new Date(this.state.selectedDate)
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+	});
+	
+    const caloriesData = {
+      norm: this.getCaloriesNorm(),
+      min: this.getCaloriesMin(),
+      max: this.getCaloriesMax()
+    };
+
+    this.result.show(caloriesData);
+  }
+
+  componentWillUnmount = () => {
+    this.form.removeEventListener(`input`, this._onFormInput, true);
+    this.form.removeEventListener(`reset`, this._onFormReset);
+    this.form.removeEventListener(`submit`, this._onFormSubmit);
+  }
+
+  _onFormInput = () => {
+    this.submit.disabled = !this.form.checkValidity();
+    this.reset.disabled = !this.parametersItems.some((el) => el.value);
+
+    this.age.value = formatInput(this.age);
+    this.height.value = formatInput(this.height);
+    this.weight.value = formatInput(this.weight);
+  }
+
+  _onFormReset = () => {
+    this.reset.disabled = true;
+    this.submit.disabled = true;
+    this.result.hide();
+  }
+
+  getCaloriesNorm = () => {
+    const age = CaloriesFormulaFactor.AGE * this.age.value;
+    const weight = CaloriesFormulaFactor.WEIGHT * this.weight.value;
+    const height = CaloriesFormulaFactor.HEIGHT * this.height.value;
+    const gender = CaloriesFormulaConstant[this.gender.value.toUpperCase()];
+    const activity = PhysicalActivityRatio[this.activity.value.toUpperCase()];
+
+    return Math.round((weight + height - age + gender) * activity);
+  }
+
+  getCaloriesMin = () => {
+    return Math.round(this.getCaloriesNorm() * CaloriesMinMaxRatio.MIN);
+  }
+
+  getCaloriesMax = () => {
+    return Math.round(this.getCaloriesNorm() * CaloriesMinMaxRatio.MAX);
+  }
+
+
+  changeDate = date => this.setState({ selectedDate: date });
+
   render () {
     return (
       <main className="main">
       <div className="container">
-        <article className="counter">
+        <article ref={ ref => this.articleCounterRef = ref} className="counter">
           <h1 className="counter__heading heading-main">
             Счётчик калорий
           </h1>
-          <form className="counter__form form" name="counter" action="#" method="post">
+          <form ref={ ref => this.counterFormRef = ref} className="counter__form form" name="counter" action="#" method="post">
             <div className="form__item">
               <h2 className="heading">
                 Пол
@@ -75,8 +183,7 @@ export class Counter extends Component {
               </ul>
             </div>
             <fieldset className="form__item form__parameters" name="parameters">
-              <legend className="visually-hidden">
-                Физические параметры
+              <legend className="heading">
               </legend>
               <div className="inputs-group">
                 <div className="input">
@@ -120,6 +227,40 @@ export class Counter extends Component {
                 </div>
               </div>
             </fieldset>
+            <fieldset className="form__item form__names" name="names">
+              <legend className="heading">
+                Персональные данные
+              </legend>
+                <label className="heading" htmlFor="height">
+                    Имя
+                </label>
+                <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
+                    <input type="text" id="firstname" name="firstname" placeholder="" inputMode="text" required />
+                </div>
+
+                <label className="heading" htmlFor="height">
+                    Фамилия
+                </label>
+                <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
+                    <input type="text" id="surname" name="surname" placeholder="" inputMode="text" required />
+                </div>
+
+				<label className="heading" htmlFor="height">
+                    Дата рождения
+                </label>
+                <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
+                    <DateTimePicker
+                        value={this.state.selectedDate}
+                        format={'yyyy-MM-dd'} 
+						disableClock={true} 
+						onChange={this.changeDate}
+                    />
+                </div>
+                <div>
+                    
+                </div>
+            </fieldset>
+
             <fieldset className="form__item">
               <legend className="heading">
                 Физическая активность

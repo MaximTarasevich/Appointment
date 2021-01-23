@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj": {}
+    "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\AppointmentService.Shared.csproj": {}
   },
   "projects": {
-    "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj": {
+    "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\AppointmentService.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\AppointmentService.Shared.csproj",
         "projectName": "AppointmentService.Shared",
-        "projectPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj",
-        "packagesPath": "/Users/maxim/.nuget/packages/",
-        "outputPath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/obj/",
+        "projectPath": "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\AppointmentService.Shared.csproj",
+        "packagesPath": "C:\\Users\\uladzislau.rabko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/maxim/.config/NuGet/NuGet.Config"
+          "C:\\Users\\uladzislau.rabko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

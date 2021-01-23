@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AppointmentService.DAL.Converters;
@@ -18,6 +19,11 @@ namespace AppointmentService.DAL.Accessors
         {
 
             return (await Query.Where(e => e.Id == id).FirstOrDefaultAsync()).ToUserEntity();
+        }
+
+        public async Task<UserEntity> GetUser(string name, string surname, DateTime date)
+        {
+            return (await Query.Where(e => e.UserName == name && e.UserSurname == surname && e.BithdayDate == date).FirstOrDefaultAsync()).ToUserEntity();
         }
 
         public async Task<UserEntity> SaveUser(UserEntity entity)

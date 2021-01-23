@@ -85,7 +85,8 @@ body {
   flex: 1 0 auto;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
-
+  padding-right: 600px;
+  padding-left: 600px;
   background-image: url("../img/main-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -99,7 +100,6 @@ body {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-
 img,
 video {
   display: block;
@@ -169,6 +169,12 @@ input[type="number"] {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
+}
+
+.react-datetime-picker__inputGroup__input,
+.react-datetime-picker__inputGroup__year {
+  height: 10px !important;
+  margin: 6px 0px !important;
 }
 
 .container {

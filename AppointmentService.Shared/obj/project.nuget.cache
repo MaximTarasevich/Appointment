@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N+nO3pGxWb+Kg1PmrsI+jUivbtHPwFcp14k0TJlNDR4XZaoGjkG4FSCZDlXnY7zaRJ5IQsRoagzzEi0HYxqrJw==",
+  "dgSpecHash": "umbYie+xpTzrVU/D3/oNIzI1eKnrtzCpo3wtYz0IrerESm7mKqrF96dYZGDJxmmwnVrLOPfkw2gx5q+M4oS0JQ==",
   "success": true,
-  "projectFilePath": "/Users/maxim/Documents/AppointmentService/AppointmentService/AppointmentService.Shared/AppointmentService.Shared.csproj",
+  "projectFilePath": "C:\\Users\\uladzislau.rabko\\Appointment\\AppointmentService.Shared\\AppointmentService.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
