@@ -21,3 +21,5 @@ ReactDOM.render(
 	rootElement
 );
 
+rootElement.firstChild.style.height = '100%';
+

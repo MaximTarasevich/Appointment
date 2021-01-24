@@ -23,3 +23,4 @@ C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Debug\netcor
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Debug\netcoreapp3.1\AppointmentService.Shared.RazorTargetAssemblyInfo.cache
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Debug\netcoreapp3.1\AppointmentService.Shared.dll
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Debug\netcoreapp3.1\AppointmentService.Shared.pdb
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Debug\netcoreapp3.1\AppointmentService.Shared.csprojAssemblyReference.cache
