@@ -12,3 +12,18 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.counter__result-item-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+.counter__result-item-child:hover {
+  border: 1px solid black;
+  border-radius: 20px;
+  background: beige;
+  opacity: 0.8;
+  cursor: pointer;
+ }

@@ -3,6 +3,9 @@ import Result from './Result';
 import {formatInput} from '../utils/format-input';
 import DateTimePicker from 'react-datetime-picker';
 import { Input } from '@material-ui/core';
+import Modal from 'react-modal';
+
+console.log('Modal', Modal);
 
 const PhysicalActivityRatio = {
   MIN: 1.2,
@@ -42,10 +45,23 @@ const PhysicalActivity = {
 	high: 3,
 };
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 export class Home extends Component {
 	
 	state = {
-		selectedDate: new Date()
+    selectedDate: new Date(),
+    paramsForTrainingAndEating: null,
+    modalIsOpen: false,
 	};
 
   componentDidMount = () => {
@@ -152,6 +168,20 @@ export class Home extends Component {
     return Math.round(this.getCaloriesNorm() * CaloriesMinMaxRatio.MAX);
   }
 
+  showPopup = (params = null) => this.setState(prevState => ({
+    paramsForTrainingAndEating: params
+  }));
+
+  openModal = () => {
+    this.setState(prevState => ({modalIsOpen: true}));
+  }
+
+  closeModal = () => {
+    this.setState(prevState => ({modalIsOpen: false}));
+  }
+
+  afterOpenModal = () => {
+  }
 
   changeDate = date => this.setState({ selectedDate: date });
 
@@ -344,32 +374,55 @@ export class Home extends Component {
             </h2>
             <ul className="counter__result-list">
               <li className="counter__result-item">
-                <h3>
+                <h3 onClick={() => this.showPopup({whichNeed: 0})} className={'counter__result-item-child'}>
                   <span id="calories-norm">3 800</span> ккал
                 </h3>
-                <p>
+                <p style={{ display: 'flex', justifyContent: 'center' }}>
                   поддержание веса
                 </p>
               </li>
               <li className="counter__result-item">
-                <h3>
+                <h3 onClick={() => this.showPopup({whichNeed: 1})} className={'counter__result-item-child'}>
                   <span id="calories-minimal">3 300</span> ккал
                 </h3>
-                <p>
+                <p style={{ display: 'flex', justifyContent: 'center' }}>
                   снижение веса
                 </p>
               </li>
               <li className="counter__result-item">
-                <h3>
+                <h3 onClick={() => this.showPopup({whichNeed: 2})} className={'counter__result-item-child'}>
                   <span id="calories-maximal">4 000</span> ккал
                 </h3>
-                <p>
+                <p style={{ display: 'flex', justifyContent: 'center' }}>
                   набор веса
                 </p>
               </li>
             </ul>
           </section>
+          {
+            this.state.paramsForTrainingAndEating ? 
+              <section style={{ marginTop: '10px' }} className={'counter__result'}>
+                <div style={{ display: 'flex', justifyContent: 'space-around', wordWrap: 'break-word' }}>
+                  <button onClick={this.openModal} style={{ fontSize: '16px', width: '180px' }} className="form__submit-button button">
+                    Рацион питания
+                  </button>
+                  <button onClick={this.openModal} style={{ fontSize: '16px', width: '180px' }} className="form__submit-button button">
+                    Программа тренировок
+                  </button>
+                </div>
+              </section> : 
+              null
+          }
         </article>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+        </Modal>
       </div>
     </main>
     );
