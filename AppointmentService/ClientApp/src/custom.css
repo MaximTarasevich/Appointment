@@ -7,6 +7,14 @@ code {
   color: #E01A76;
 }
 
+.selected {
+  border: 1px solid gray;
+  border-radius: 20px;
+  background: #fd7d36 !important;
+  cursor: pointer;
+  color: black !important;
+ }
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -15,9 +23,11 @@ code {
 
 .counter__result-item-child {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid rgba(0,0,0,0);
+  padding: 5px;
 }
 
 .counter__result-item-child:hover {
