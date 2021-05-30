@@ -1465,11 +1465,19 @@ export class Home extends Component {
       nameOfDay,
     }));
   }
+
+  closeTrainiesModal = () => {
+    this.setState(prevState => ({trainiesModalIsOpen: false}));
+  }
   
+  openTrainiesModal = () => {
+    this.setState(prevState => ({trainiesModalIsOpen: true}));
+  }
+
   closeRecipiesModal = () => {
     this.setState(prevState => ({recipiesModalIsOpen: false}));
   }
-
+  
   openDayCardsModal = () => {
     this.setState(prevState => ({dayCardsModalIsOpen: true}));
   }
@@ -1489,7 +1497,7 @@ export class Home extends Component {
         description={descriptionOfCard}
         tags={[]}
       />
-      <div style={{overflowY: 'auto'}}>
+      <div className={'TaggedContentCard_warapper'} style={{overflowY: 'auto'}}>
         <span style={{fontSize: '3rem', paddingLeft: '30px', fontWeight: '650'}}>{typeOfEating}</span>
         <div
           dangerouslySetInnerHTML={{__html: content}}
@@ -1510,20 +1518,20 @@ export class Home extends Component {
           <h1 className="counter__heading heading-main">
             Счётчик калорий
           </h1>
-          <form ref={ ref => this.counterFormRef = ref} className="counter__form form" name="counter" action="#" method="post">
+          <form style={{ background: '#eee2dc' }} ref={ ref => this.counterFormRef = ref} className="counter__form form" name="counter" action="#" method="post">
             <div className="form__item">
               <h2 className="heading">
                 Пол
               </h2>
               <ul className="switcher">
                 <li className="switcher__item">
-                  <input id="gender-male" name="gender" value="male" type="radio" defaultChecked readOnly={true} required/>
+                  <input style={{ background: 'rgb(209, 215, 237)' }} id="gender-male" name="gender" value="male" type="radio" defaultChecked readOnly={true} required/>
                   <label htmlFor="gender-male">
                     Мужчина
                   </label>
                 </li>
                 <li className="switcher__item">
-                  <input id="gender-female" name="gender" value="female" type="radio" required />
+                  <input style={{ background: 'rgb(209, 215, 237)' }} id="gender-female" name="gender" value="female" type="radio" required />
                   <label htmlFor="gender-female">
                     Женщина
                   </label>
@@ -1544,7 +1552,7 @@ export class Home extends Component {
                     </span>
                   </div>
                   <div className="input__wrapper">
-                    <input type="text" id="age" name="age" placeholder="0" inputMode="decimal" maxLength="3" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} type="text" id="age" name="age" placeholder="0" inputMode="decimal" maxLength="3" required />
                   </div>
                 </div>
                 <div className="input">
@@ -1557,7 +1565,7 @@ export class Home extends Component {
                     </span>
                   </div>
                   <div className="input__wrapper">
-                    <input type="text" id="height" name="height" placeholder="0" inputMode="decimal" maxLength="3" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} type="text" id="height" name="height" placeholder="0" inputMode="decimal" maxLength="3" required />
                   </div>
                 </div>
                 <div className="input">
@@ -1570,7 +1578,7 @@ export class Home extends Component {
                     </span>
                   </div>
                   <div className="input__wrapper">
-                    <input type="text" id="weight" name="weight" placeholder="0" inputMode="decimal" maxLength="3" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} type="text" id="weight" name="weight" placeholder="0" inputMode="decimal" maxLength="3" required />
                   </div>
                 </div>
               </div>
@@ -1583,26 +1591,14 @@ export class Home extends Component {
                     Имя
                 </label>
                 <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
-                    <input type="text" id="firstname" name="firstname" placeholder="" inputMode="text" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} type="text" id="firstname" name="firstname" placeholder="" inputMode="text" required />
                 </div>
 
                 <label className="heading" htmlFor="height">
                     Фамилия
                 </label>
                 <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
-                    <input type="text" id="surname" name="surname" placeholder="" inputMode="text" required />
-                </div>
-
-				<label className="heading" htmlFor="height">
-                    Дата рождения
-                </label>
-                <div style={{ marginTop: '-10px', width: '400px' }} className="input__wrapper">
-                    <DateTimePicker
-                        value={this.state.selectedDate}
-                        format={'yyyy-MM-dd'} 
-						disableClock={true} 
-						onChange={this.changeDate}
-                    />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} type="text" id="surname" name="surname" placeholder="" inputMode="text" required />
                 </div>
                 <div>
                     
@@ -1616,7 +1612,7 @@ export class Home extends Component {
               <ul className="radios-group">
                 <li className="radio">
                   <div className="radio__wrapper">
-                    <input id="activity-minimal" name="activity" value="min" type="radio" defaultChecked readOnly required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} id="activity-minimal" name="activity" value="min" type="radio" defaultChecked readOnly required />
                     <label htmlFor="activity-minimal">
                       Минимальная
                     </label>
@@ -1627,7 +1623,7 @@ export class Home extends Component {
                 </li>
                 <li className="radio">
                   <div className="radio__wrapper">
-                    <input id="activity-low" name="activity" value="low" type="radio" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} id="activity-low" name="activity" value="low" type="radio" required />
                     <label htmlFor="activity-low">
                       Низкая
                     </label>
@@ -1638,7 +1634,7 @@ export class Home extends Component {
                 </li>
                 <li className="radio">
                   <div className="radio__wrapper">
-                    <input id="activity-medium" name="activity" value="medium" type="radio" required />
+                    <input  id="activity-medium" name="activity" value="medium" type="radio" required />
                     <label htmlFor="activity-medium">
                       Средняя
                     </label>
@@ -1649,7 +1645,7 @@ export class Home extends Component {
                 </li>
                 <li className="radio">
                   <div className="radio__wrapper">
-                    <input id="activity-high" name="activity" value="high" type="radio" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} id="activity-high" name="activity" value="high" type="radio" required />
                     <label htmlFor="activity-high">
                       Высокая
                     </label>
@@ -1660,7 +1656,7 @@ export class Home extends Component {
                 </li>
                 <li className="radio">
                   <div className="radio__wrapper">
-                    <input id="activity-maximal" name="activity" value="max" type="radio" required />
+                    <input style={{ background: 'rgb(209, 215, 237)' }} id="activity-maximal" name="activity" value="max" type="radio" required />
                     <label htmlFor="activity-maximal">
                       Очень высокая
                     </label>
@@ -1691,6 +1687,7 @@ export class Home extends Component {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
+              background: 'rgb(238, 226, 220)',
             }} 
             className="counter__result counter__result--hidden"
           >
@@ -1734,12 +1731,12 @@ export class Home extends Component {
           </section>
           {
             this.state.paramsForTrainingAndEating.whichNeed !== null ? 
-              <section style={{ marginTop: '10px' }} className={'counter__result'}>
+              <section style={{ marginTop: '10px', background: 'rgb(238, 226, 220)' }} className={'counter__result'}>
                 <div style={{ display: 'flex', justifyContent: 'space-around', wordWrap: 'break-word' }}>
                   <button onClick={this.openDayCardsModal} style={{ fontSize: '16px', width: '180px' }} className="form__submit-button button">
                     Рацион питания
                   </button>
-                  <button onClick={this.openDayCardsModal} style={{ fontSize: '16px', width: '180px' }} className="form__submit-button button">
+                  <button onClick={this.openTrainiesModal} style={{ fontSize: '16px', width: '180px' }} className="form__submit-button button">
                     Программа тренировок
                   </button>
                 </div>
@@ -1747,7 +1744,50 @@ export class Home extends Component {
               null
           }
         </article>
-        
+        <Modal
+          isOpen={this.state.trainiesModalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeTrainiesModal}
+          style={{content : {
+            width                 : '65%',
+            height                : '88%',
+            top                   : '50%',
+            left                  : '50%',
+            right                 : 'auto', 
+            marginRight           : '-50%',
+            bottom                : 'auto',
+            transform             : 'translate(-50%, -50%)',
+          },
+          overlay: {
+            zIndex: 1111111111111111111,
+          }}}
+          contentLabel="Example"
+        >
+          <section 
+            style={{
+              display: 'flex',
+              height: '100%',
+              justifyContent: 'center', 
+            }}
+          >  
+            <div>
+              <img src="../img/1.jpg" alt=""/>
+              <img src="../img/2.jpg" alt=""/>
+              <img src="../img/3.jpg" alt=""/>
+              <img src="../img/4.jpg" alt=""/>
+              <img src="../img/5.jpg" alt=""/>
+              <img src="../img/6.jpg" alt=""/>
+              <img src="../img/7.jpg" alt=""/>
+              <img src="../img/8.jpg" alt=""/>
+              <img src="../img/9.jpg" alt=""/>
+              <img src="../img/10.jpg" alt=""/>
+              <img src="../img/11.jpg" alt=""/>
+              <img src="../img/12.jpg" alt=""/>
+              <img src="../img/13.jpg" alt=""/>
+              <img src="../img/14.jpg" alt=""/>  
+            </div>
+          </section>
+        </Modal>
         <Modal
           isOpen={this.state.recipiesModalIsOpen}
           onAfterOpen={this.afterOpenModal}

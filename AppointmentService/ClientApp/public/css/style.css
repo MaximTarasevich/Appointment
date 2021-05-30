@@ -56,7 +56,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: lightgray !important;
+  background-color: #edc7b7 !important; 
+  color: #123c69 !important;  
 }
 
 html {
@@ -69,7 +70,6 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-family: "PT Sans Caption", "Arial", sans-serif;
-  color: var(--color-text-black);
 }
 
 .page {
@@ -218,7 +218,7 @@ input[type="number"] {
   margin: 0;
   margin-bottom: 22px;
 
-  color: #212529;
+  /* color: #212529; */
   text-align: center;
 }
 
@@ -254,7 +254,7 @@ input[type="number"] {
 .counter__result > .heading {
   margin-bottom: 12px;
 
-  color: var(--color-accent);
+  color: rgb(18, 60, 105);
 }
 
 .counter__result-list {
@@ -333,11 +333,11 @@ input[type="number"] {
   text-align: center;
   padding: 14px;
 
-  color: var(--color-text-black);
+  color: #123c69;
 
   user-select: none;
   cursor: pointer;
-  border: solid 0.5px var(--color-accent);
+  border: solid 0.5px #ac3b61;
   background-color: transparent;
   transition: 0.3s ease;
   transition-property: color, border, background, z-index, margin;
@@ -364,7 +364,7 @@ input[type="number"] {
 .switcher__item label:hover {
   z-index: 3;
 
-  color: var(--color-accent);
+  color: #123c69;
 }
 
 .switcher__item input[type="radio"]:checked + label {
@@ -373,7 +373,7 @@ input[type="number"] {
   color: var(--color-text-white);
 
   border-color: transparent;
-  background-color: var(--color-accent);
+  background-color: #ac3b61;
 }
 
 .switcher__item input[type="radio"]:checked + label:hover {
@@ -441,7 +441,7 @@ input[type="number"] {
 .input__wrapper input:hover,
 .input__wrapper input:active,
 .input__wrapper input:focus {
-  border-color: var(--color-accent);
+  border-color: #e22867;
 }
 
 .input__wrapper input:hover::placeholder,
@@ -527,7 +527,7 @@ input[type="number"] {
 
 .radio__wrapper label:hover,
 .radio__wrapper input[type="radio"]:checked + label {
-  color: var(--color-accent);
+  color: #ac3b61;
 }
 
 .radio__description {
@@ -568,18 +568,18 @@ input[type="number"] {
   outline: none;
   border: none;
   border-radius: 4px;
-  background-color: var(--color-accent);
+  background-color: #ac3b61;
   transition: 0.3s ease;
   transition-property: background;
 }
 
 .button:hover,
 .button:focus {
-  background-color: var(--color-accent-hover);
+  background-color: #e22867;
 }
 
 .button:active {
-  background-color: var(--color-accent-active);
+  background-color: #ac3b61;
 }
 
 .button:disabled {

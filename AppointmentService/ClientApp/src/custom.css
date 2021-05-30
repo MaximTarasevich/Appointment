@@ -10,9 +10,9 @@ code {
 .selected {
   border: 1px solid gray;
   border-radius: 20px;
-  background: #fd7d36 !important;
+  background: #ac3b61 !important;
   cursor: pointer;
-  color: black !important;
+  color: white !important;
  }
 
 .btn-primary {
@@ -33,7 +33,40 @@ code {
 .counter__result-item-child:hover {
   border: 1px solid black;
   border-radius: 20px;
-  background: beige;
+  background: rgba(226, 40, 103, 0.5);
   opacity: 0.8;
   cursor: pointer;
  }
+
+
+.TaggedContentCard_warapper::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(172, 59, 97, 0.15);
+  border-radius: 5px;
+  height: 5px;
+}
+.ReactModal__Content--after-open::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(172, 59, 97, 0.15);
+  border-radius: 5px;
+  height: 5px;
+}
+.TaggedContentCard_warapper::-webkit-scrollbar-thumb {
+  background: rgb(172, 59, 97);
+  border-radius: 5px;
+}
+.ReactModal__Content--after-open::-webkit-scrollbar-thumb {
+  background: rgb(172, 59, 97);
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(172, 59, 97);
+  border-radius: 5px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(172, 59, 97, 0.15);
+  border-radius: 5px;
+  height: 5px;
+}
+/* .ReactModal__Content ReactModal__Content--after-open */
