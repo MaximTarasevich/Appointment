@@ -1,0 +1,13 @@
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\bin\Release\netcoreapp3.1\AppointmentService.Shared.deps.json
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\bin\Release\netcoreapp3.1\AppointmentService.Shared.dll
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\bin\Release\netcoreapp3.1\AppointmentService.Shared.pdb
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.csprojAssemblyReference.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.AssemblyInfoInputs.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.AssemblyInfo.cs
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.csproj.CoreCompileInputs.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\staticwebassets\AppointmentService.Shared.StaticWebAssets.Manifest.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\staticwebassets\AppointmentService.Shared.StaticWebAssets.xml
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\scopedcss\bundle\AppointmentService.Shared.styles.css
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.RazorTargetAssemblyInfo.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.dll
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.Shared\obj\Release\netcoreapp3.1\AppointmentService.Shared.pdb
