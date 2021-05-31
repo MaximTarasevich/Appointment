@@ -18,5 +18,5 @@ export default class App extends Component {
         {/* <Route path='/admin-page' component={AdminPage} /> */}
       </Layout>
     );
-  }       
+  }         
 }
