@@ -1,12 +1,12 @@
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.csprojAssemblyReference.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.AssemblyInfoInputs.cache
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.AssemblyInfo.cs
+C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.csproj.CoreCompileInputs.cache
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\bin\Release\netcoreapp3.1\AppointmentService.DAL.deps.json
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\bin\Release\netcoreapp3.1\AppointmentService.DAL.dll
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\bin\Release\netcoreapp3.1\AppointmentService.DAL.pdb
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\bin\Release\netcoreapp3.1\AppointmentService.Shared.dll
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\bin\Release\netcoreapp3.1\AppointmentService.Shared.pdb
-C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.csprojAssemblyReference.cache
-C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.AssemblyInfoInputs.cache
-C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.AssemblyInfo.cs
-C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\AppointmentService.DAL.csproj.CoreCompileInputs.cache
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\staticwebassets\AppointmentService.DAL.StaticWebAssets.Manifest.cache
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\staticwebassets\AppointmentService.DAL.StaticWebAssets.xml
 C:\Users\uladzislau.rabko\Appointment\AppointmentService.DAL\obj\Release\netcoreapp3.1\scopedcss\bundle\AppointmentService.DAL.styles.css

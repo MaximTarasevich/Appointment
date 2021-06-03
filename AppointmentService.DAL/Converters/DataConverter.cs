@@ -20,6 +20,7 @@ namespace AppointmentService.DAL.Converters
             entity.Gender = newEntity.Gender;
             entity.PhysicalActiveType = newEntity.PhysicalActiveType;
             entity.UserId = newEntity.UserId;
+            entity.Age = newEntity.Age;
 
             return entity;
         }

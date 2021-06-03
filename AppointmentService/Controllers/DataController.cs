@@ -31,9 +31,10 @@ namespace AppointmentService.Controllers
                 if (!ModelState.IsValid)
                     return null;
                 var birthdate = new DateTime(model.BithdayDate.Year, model.BithdayDate.Month, model.BithdayDate.Day);
-                    var user = await _dm.UserAccessor.GetUser(model.UserName, model.UserSurname, birthdate);
+                    var user = await _dm.UserAccessor.GetUser(model.UserName, model.UserSurname, model.Age);
+
                 if (user == null)
-                    user = await _dm.UserAccessor.SaveUser(new UserEntity() { BithdayDate = birthdate, UserName = model.UserName, UserSurname = model.UserSurname });
+                    user = await _dm.UserAccessor.SaveUser(new UserEntity() { Age = model.Age, BithdayDate = birthdate, UserName = model.UserName, UserSurname = model.UserSurname });
 
                 entity = new DataEntity();
                 entity.Gender = model.Gender;
@@ -64,7 +65,7 @@ namespace AppointmentService.Controllers
                     id = e.Id,
                     username = e.UserName,
                     usersurname = e.UserSurname,
-                    birthdaydate = e.BithdayDate,
+                    userage = e.Age
                 }).ToList();
 
                 var result = new

@@ -9,7 +9,9 @@ import {
   XAxis, 
   YAxis, 
   CartesianGrid, 
-  Tooltip
+  Tooltip,
+  BarChart,
+  Bar,
 } from 'recharts';
 
 const COLORS = ['#0088FE', '#00C49F'];
@@ -47,8 +49,8 @@ export class Statistik extends Component {
       .then((data) => {
         this.setState({
           users: data.items.reduce( (accumulator, currentValue) => {
-            if (accumulator.find( item => item.date === new Date(currentValue.birthdaydate).getFullYear() )) {
-              accumulator[accumulator.findIndex( item => item.date === new Date(currentValue.birthdaydate).getFullYear())].count++;
+            if (accumulator.find( item => item.date === currentValue.userage )) {
+              accumulator[accumulator.findIndex( item => item.date === currentValue.userage )].count++;
               return [
                 ...accumulator
               ];
@@ -57,7 +59,7 @@ export class Statistik extends Component {
                 ...accumulator,
                 {
                   count: 1,
-                  date: new Date(currentValue.birthdaydate).getFullYear()
+                  date: currentValue.userage
                 } 
               ]  
             }
@@ -80,7 +82,7 @@ export class Statistik extends Component {
   }
 
   render() {
-    console.log('this.state.allData', this.state.users);
+    console.log('this.state.users', this.state.users);
     return (
       <div style={{ height: '100%' }} >
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px'}}>
@@ -102,15 +104,15 @@ export class Statistik extends Component {
                 Возрастные категории людей, воспользовавшиеся приложением
               </legend>
 
-              <AreaChart width={600} height={400} data={this.state.users.sort( (a,b) => a.date - b.date ) } margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+              <BarChart width={600} height={400} data={this.state.users.sort( (a,b) => a.date - b.date ) } margin={{top: 10, right: 30, left: 0, bottom: 0}}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="date"/>
                 <YAxis/>
                 <Tooltip/>
-                <Area type='monotone' dataKey='count' stroke='#8884d8' fill='#8884d8' fillOpacity={0.3}/>
-      
+                {/* <Area type='monotone' dataKey='count' stroke='#8884d8' fill='#8884d8' fillOpacity={0.3}/> */}
+                <Bar type='monotone' dataKey='count' stroke='#8884d8' fill='#8884d8' fillOpacity={0.7} barSize={30} />
                 {/* <Area type={cardinal} dataKey='uv' stroke='#82ca9d' fill='#82ca9d' fillOpacity={0.3}/> */}
-              </AreaChart>
+              </BarChart>
             {/* <PieChart width={730} height={250}>
               <Pie data={this.makeCorrectDataForPieChart()} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8" >
                 {this.makeCorrectDataForPieChart().map((entry, index) => <Cell key={`afsdfasdfasdfasdfadf-${index}`} fill={COLORS[index % COLORS.length]} />)}

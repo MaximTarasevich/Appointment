@@ -22,5 +22,7 @@ namespace AppointmentService.Shared.Models
         public int Gender { get; set; }
 
         public int UserId { get; set; }
+
+        public int Age{ get; set; }
     }
 }

@@ -1388,14 +1388,14 @@ export class Home extends Component {
 	fetch('data/Save', {
         method: 'POST',
         body: JSON.stringify({
-			Gender: GenderType[this.elements.gender.value],
-			Age: this.elements.age.value,
-			Weight: this.elements.weight.value,
-			Height: this.elements.height.value,
-			Activity: PhysicalActivity[this.elements.activity.value],
-			UserName: this.elements.firstname.value,
-			UserSurname: this.elements.surname.value,
-			BithdayDate: new Date(this.state.selectedDate)
+          Gender: GenderType[this.elements.gender.value],
+          Age: this.elements.age.value,
+          Weight: this.elements.weight.value,
+          Height: this.elements.height.value,
+          Activity: PhysicalActivity[this.elements.activity.value],
+          UserName: this.elements.firstname.value,
+          UserSurname: this.elements.surname.value,
+          BithdayDate: new Date(this.state.selectedDate)
         }),
         headers: {
           'Content-Type': 'application/json'

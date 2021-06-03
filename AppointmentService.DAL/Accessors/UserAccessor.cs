@@ -21,9 +21,9 @@ namespace AppointmentService.DAL.Accessors
             return (await Query.Where(e => e.Id == id).FirstOrDefaultAsync()).ToUserEntity();
         }
 
-        public async Task<UserEntity> GetUser(string name, string surname, DateTime date)
+        public async Task<UserEntity> GetUser(string name, string surname, int age)
         {
-            return (await Query.Where(e => e.UserName == name && e.UserSurname == surname && e.BithdayDate == date).FirstOrDefaultAsync()).ToUserEntity();
+            return (await Query.Where(e => e.UserName == name && e.UserSurname == surname && e.Age == age).FirstOrDefaultAsync()).ToUserEntity();
         }
 
         public async Task<UserEntity> SaveUser(UserEntity entity)

@@ -11,9 +11,9 @@ export default class Result {
   }
 
   show(calories) {
-    this.caloriesNormOutput.textContent = formatNumber(calories.norm);
-    this.caloriesMinOutput.textContent = formatNumber(calories.min);
-    this.caloriesMaxOutput.textContent = formatNumber(calories.max);
+    this.caloriesNormOutput.textContent = formatNumber(calories.norm - (calories.norm % 10));
+    this.caloriesMinOutput.textContent = formatNumber(calories.min - (calories.min % 10));
+    this.caloriesMaxOutput.textContent = formatNumber(calories.max - (calories.max % 10));
 
     this.root.classList.remove(`counter__result--hidden`);
     this.root.scrollIntoView({block: `center`, behavior: `smooth`});

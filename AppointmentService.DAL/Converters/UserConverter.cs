@@ -18,7 +18,8 @@ namespace AppointmentService.DAL.Converters
 
             entity.UserName = newEntity.UserName;
             entity.UserSurname = newEntity.UserSurname;
-            entity.BithdayDate = newEntity.BithdayDate;
+            entity.BirthdayDate = newEntity.BithdayDate;
+            entity.Age = newEntity.Age;
             return entity;
         }
 
@@ -33,7 +34,8 @@ namespace AppointmentService.DAL.Converters
             entity.Id = model.Id;
             entity.UserName = model.UserName;
             entity.UserSurname = model.UserSurname;
-            entity.BithdayDate = model.BithdayDate;
+            entity.BirthdayDate = model.BirthdayDate;
+            entity.Age= model.Age;
 
             return entity;
         }

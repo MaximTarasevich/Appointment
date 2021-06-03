@@ -16,5 +16,9 @@ namespace AppointmentService.Shared.Models
         public string UserSurname { get; set; }
 
         public DateTime BithdayDate { get; set; }
+
+        public int Age { get; set; }
+
+        public object BirthdayDate { get; set; }
     }
 }
